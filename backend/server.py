@@ -1,3 +1,6 @@
+import nltk
+nltk.download('punkt')  # Download at runtime
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 
