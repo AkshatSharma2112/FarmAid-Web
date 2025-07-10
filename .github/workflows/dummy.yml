@@ -1,0 +1,10 @@
+name: Dummy Workflow
+
+on: [push]
+
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: ✅ Dummy check
+        run: echo "GitHub is happy now!"

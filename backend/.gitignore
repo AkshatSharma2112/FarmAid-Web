@@ -1,0 +1,30 @@
+# Node.js dependencies
+node_modules/
+
+# Python cache and build files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+build/
+dist/
+
+# Environment files
+.env
+
+# Log files
+*.log
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.vscode/
+.idea/
+
+# Package manager lock files (optional to ignore)
+# package-lock.json
+# pipfile.lock

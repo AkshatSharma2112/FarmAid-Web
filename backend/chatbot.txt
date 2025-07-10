@@ -1,0 +1,12 @@
+This website is developed to help farmers.
+It provides information about different crops.
+You can check weather updates on this site.
+This is Demeter – a smart agriculture platform designed to support farmers in optimizing their operations. It offers tools for:\n- Disease detection: using ML to identify crop issues\n- Fertilizer & crop recommendations: based on soil, climate, and market factors\n- Weather predictions: to assist in planning\n- A chatbot interface: for quick guidance\nVisit: farming-assistant.vercel.app.
+  
+The platform is built and maintained by the Demeter™ team, as indicated by the footer: \"Copyright © 2025 Demeter™\"\nVisit: farming-assistant.vercel.app.
+  
+The site currently does not show explicit contact details. However, standard options for user contact could include:\n- A 'Contact Us' page or link (best added to the main navigation)\n- A chat form or email address within the app\n- Developer emails or a support link (commonly found in a footer or About section).
+
+Email: support@scarecrow.com.
+
+Phone: +91 **********.
