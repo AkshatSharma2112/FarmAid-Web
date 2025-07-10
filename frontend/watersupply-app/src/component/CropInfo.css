@@ -1,0 +1,114 @@
+.cropsec{
+  background-image: url('../assets/img5.jpg');
+  background-size: cover;
+  background-position: center;
+  height: calc(100vh - 98px);
+}
+h1{
+  color: #11a350;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding-top: 30px;
+  text-align: center;
+}
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 30px;
+}
+.card form {
+  background: #ffffff;
+  width: 500px;
+  height: 250px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  text-align: left;
+}
+
+.card label {
+  font-size: 1.2em;
+  color: #00796b;
+  display: block;
+  margin-bottom: 0px;
+}
+.card select, input[type="text"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.area input[type="number"] {
+  width: calc(100% - 22px);
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+.card button {
+  background-color: #00796b;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5vw;
+}
+
+.card button:hover {
+  background-color: #004d40;
+}
+
+.card button:active {
+  background-color: #00251a;
+}
+
+.results {
+  text-align: center; 
+  justify-content: center;
+  width: 70vw;
+  background-color: #e0f7fa; /* Light blue background */
+  border: 1px solid #00796b; /* Teal border */
+  padding: 10px 50px ; /* Padding for spacing */
+  margin-top: 50px;
+  margin-left: 15vw; /* Space above the results */
+  border-radius: 40px; /* Rounded corners */
+  font-family: Arial, sans-serif; /* Font style */
+  color: #004d40; /* Dark teal text */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+}
+
+/* Styling for the result heading */
+.results h2 {
+  font-size: 22px; /* Larger font */
+  color: #00796b; /* Deep teal */
+  margin-bottom: 10px; /* Space below heading */
+  text-align: center; /* Centered text */
+}
+
+/* Styling for the result content */
+.results p {
+  font-size: 16px; /* Standard font size */
+  line-height: 1.6; /* Better readability */
+  margin: 8px 0; /* Space between paragraphs */
+}
+
+/* Additional styling for emphasis */
+.results strong {
+  color: #004d40; /* Darker teal */
+  font-weight: bold;
+}
+
+/* Styling for additional info */
+.additional-info {
+  font-size: 14px;
+  color: #00796b;
+  margin-top: 15px;
+  font-style: italic;
+}

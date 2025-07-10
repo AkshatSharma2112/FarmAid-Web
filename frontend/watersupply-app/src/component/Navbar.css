@@ -1,0 +1,181 @@
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 15px 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.logo {
+  width: 100px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.logo1 {
+  width: 100px;
+  margin-left: -50px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0;
+  margin: 0 20px;
+}
+
+ul li {
+  margin: 0 15px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+}
+
+ul li a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.toggleicon {
+  width: 40px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.searchbox {
+  display: flex;
+  align-items: center;
+  background-color: hsl(0, 0%, 14%);
+  height: 50px;
+  padding: 1px 20px;
+  border-radius: 50px;
+  width: fit-content;
+  margin-left: 20px;
+}
+
+.searchbox input {
+  background: transparent;
+  border: none !important;
+  outline: none;
+  box-shadow: none;
+  color: white;
+  padding-top: 30px !important;
+  font-size: 16px;
+  caret-color: white;
+}
+
+.searchbox input::placeholder {
+  color: #fff;
+  text-align: left;
+}
+
+.searchbox img {
+  width: 20px;
+  cursor: pointer;
+}
+
+.dark .navbar {
+  background-color: #000;
+  color: #fff;
+}
+
+.dark .searchbox {
+  background: #fff;
+}
+
+.dark .searchbox input {
+  color: #222;
+}
+
+.dark .searchbox input::placeholder {
+  color: #222;
+}
+
+.dark .navbar ul li {
+  color: #fff;
+}
+
+.tab-container {
+  display: flex;
+  background-color: #d1f0de;
+  border-radius: 40px;
+  padding: 4px;
+  margin-left: 20px;
+  width: fit-content;
+}
+
+.tab-container a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tab-button {
+  padding: 10px 24px;
+  border: none;
+  border-radius: 40px;
+  background-color: transparent;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: black;
+}
+
+.tab-button.active {
+  background-color: #0ab66c;
+  color: white;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 15px;
+  }
+
+  .logo {
+    margin-left: 0;
+  }
+
+  .logo1 {
+    margin-left: 0;
+  }
+
+  ul {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  ul li {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+
+  .tab-container {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .searchbox {
+    width: 100%;
+    justify-content: center;
+    margin: 10px 0;
+  }
+
+  .toggleicon {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+  }
+}

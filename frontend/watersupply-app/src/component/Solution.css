@@ -1,0 +1,49 @@
+.solutions-section {
+    background-color: #fefcef;
+    padding: 64px 24px;
+    text-align: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .solutions-heading {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 48px;
+  }
+  
+  .solutions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 32px;
+    max-width: 1000px;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .solution-card {
+    background-color: white;
+    padding: 24px;
+    border-radius: 16px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .solution-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  }
+  
+  .solution-icon {
+    font-size: 2.5rem;
+    margin-bottom: 16px;
+  }
+  
+  .solution-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+  }
+  
