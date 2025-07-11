@@ -99,11 +99,8 @@ def get_bot_response(user_response):
 
     return tfidf_response(user_response)
 
-# Flask setup
 app = Flask(__name__)
-
-# ✅ Use your actual deployed Vercel frontend URL here:
-CORS(app, origins=["https://kisaan-bot.vercel.app"])
+CORS(app, origins=["https://farm-aid-web.vercel.app"])
 
 # Health check route (optional)
 @app.route('/', methods=['GET'])
