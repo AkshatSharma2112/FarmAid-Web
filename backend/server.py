@@ -14,10 +14,15 @@ import nltk
 from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-# Ensure necessary NLTK data is available
-for resource in ["punkt", "wordnet"]:
+# Correct NLTK resource paths
+required_resources = {
+    "punkt": "tokenizers/punkt",
+    "wordnet": "corpora/wordnet"
+}
+
+for resource, path in required_resources.items():
     try:
-        nltk.data.find(f"tokenizers/{resource}")
+        nltk.data.find(path)
     except LookupError:
         nltk.download(resource)
 
@@ -27,10 +32,9 @@ with open(os.path.join(os.path.dirname(__file__), 'chatbot.txt'), 'r', errors='i
 
 raw_doc = raw_doc.lower()
 
-# Sentence and word tokenization
+# Sentence tokenization
 sent_tokenizer = PunktSentenceTokenizer()
 sent_tokens = sent_tokenizer.tokenize(raw_doc)
-word_tokens = word_tokenize(raw_doc)
 
 lemmer = WordNetLemmatizer()
 
@@ -52,7 +56,7 @@ def greet(sentence):
             return random.choice(GREET_RESPONSES)
     return None
 
-# Predefined responses from corpus
+# Load static corpus
 with open(os.path.join(os.path.dirname(__file__), "corpus.json"), "r", encoding="utf-8") as file:
     corpus = json.load(file)
 
@@ -112,5 +116,4 @@ def chat():
     return jsonify({"reply": bot_reply})
 
 if __name__ == '__main__':
-    print("🔌 Starting Flask server on http://localhost:5000 ...")
     app.run(debug=True, port=5000)
