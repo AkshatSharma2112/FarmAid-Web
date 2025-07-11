@@ -9,12 +9,11 @@ import os
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
-# NLTK imports
 import nltk
 from nltk.tokenize import PunktSentenceTokenizer, word_tokenize
 from nltk.stem import WordNetLemmatizer
 
-# Correct NLTK resource paths
+# Ensure NLTK resources
 required_resources = {
     "punkt": "tokenizers/punkt",
     "wordnet": "corpora/wordnet"
@@ -26,13 +25,11 @@ for resource, path in required_resources.items():
     except LookupError:
         nltk.download(resource)
 
-# Load chatbot knowledge base
+# Load knowledge base
 with open(os.path.join(os.path.dirname(__file__), 'chatbot.txt'), 'r', errors='ignore') as f:
     raw_doc = f.read()
 
 raw_doc = raw_doc.lower()
-
-# Sentence tokenization
 sent_tokenizer = PunktSentenceTokenizer()
 sent_tokens = sent_tokenizer.tokenize(raw_doc)
 
@@ -46,7 +43,6 @@ remove_punct_dict = dict((ord(punct), None) for punct in string.punctuation)
 def LemNormalize(text):
     return LemTokens(word_tokenize(text.lower().translate(remove_punct_dict)))
 
-# Greeting logic
 GREET_INPUTS = ("hello", "hi", "greetings", "sup", "what's up", "hey")
 GREET_RESPONSES = ["hi", "hey", "hello", "All good! What about you?", "Glad you are talking to me"]
 
@@ -56,7 +52,6 @@ def greet(sentence):
             return random.choice(GREET_RESPONSES)
     return None
 
-# Load static corpus
 with open(os.path.join(os.path.dirname(__file__), "corpus.json"), "r", encoding="utf-8") as file:
     corpus = json.load(file)
 
@@ -106,7 +101,14 @@ def get_bot_response(user_response):
 
 # Flask setup
 app = Flask(__name__)
-CORS(app)
+
+# ✅ Use your actual deployed Vercel frontend URL here:
+CORS(app, origins=["https://kisaan-bot.vercel.app"])
+
+# Health check route (optional)
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({"status": "Backend is running"})
 
 @app.route('/chat', methods=['POST'])
 def chat():
